@@ -29,5 +29,6 @@ jobs:
             cd chatbot-app
             ls -la
             echo "the git clone process is complete"
+            pwd
             # Any other deployment commands you need
           EOF
