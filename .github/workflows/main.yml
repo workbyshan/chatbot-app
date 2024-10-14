@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout code 
         uses: actions/checkout@v3
 
       - name: Add SSH key
@@ -21,7 +21,7 @@ jobs:
       - name: Deploy to EC2
         run: |
           ssh -o StrictHostKeyChecking=no ec2-user@${{ secrets.EC2_HOST }} << 'EOF'
-            git clone https://github.com/<your-username>/<your-repo>.git
-            cd <your-repo>
+            git clone https://github.com/workbyshan/chatbot-app.git
+            cd chatbot-app
             # Any other deployment commands you need
           EOF
