@@ -27,6 +27,7 @@ jobs:
           ssh -o StrictHostKeyChecking=no ubuntu@${{ secrets.EC2_HOST }} << 'EOF'
             git clone https://github.com/workbyshan/chatbot-app.git
             cd chatbot-app
+            ls -la
             echo "the git clone process is complete"
             # Any other deployment commands you need
           EOF
